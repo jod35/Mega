@@ -1,0 +1,116 @@
+body{
+   
+background-color:darkslategray;
+}
+
+.cont{
+    display: flex;
+}
+.form{
+   margin: auto; 
+    color:coral;
+    widows: 400px; 
+    height: 600px;
+}
+.form h3{
+    color: coral;
+}
+.table{
+    margin-left: 200px;
+    margin-top: 25px;
+    
+    width: 800px;
+  
+}
+th{
+    width: 200px;
+    background-color: coral;
+    color: white;
+}
+h3{
+    color: coral;
+}
+td{
+    width: 10px;
+    color: coral;
+}
+nav{
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+a{
+    color:darkslategray;
+    padding: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+a:hover{
+    background-color:darkslategray;
+    color: coral;
+    text-decoration: none;
+}
+
+.flash{
+    color: gold;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.mybtn{
+    color: white;
+    background-color: coral
+}
+
+.update{
+    display: flex;
+    padding: 25px;
+}
+
+.update table{
+    border: white solid 1px;
+
+}
+.update form{
+    border: 1px solid white;
+}
+.form-login{
+    margin: auto;
+    text-align: center;
+    color:coral;
+}
+h1{
+    color: coral;
+    text-align: center;
+}
+.form-index{
+margin:auto;
+color: coral;
+padding: 20px;
+}
+td a:hover{
+    color: coral;
+}
+footer{
+    color: coral;
+    font: size 25px;
+    padding :30px;
+    font-weight: bolder;
+
+}
+footer p{
+    margin-left: 480px;
+}
+.welcome{
+    color:darkslategray;
+    background-color: coral;
+    font-size: 100px;
+}
+.form-update{
+    margin: auto;
+    text-align: center;
+}

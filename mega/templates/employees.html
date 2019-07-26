@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>
+        Employee
+    </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+</head>
+<body>
+      <div class="logo">
+        <h1>Employee Database Manager</h1>
+    </div>
+    <nav>
+       
+      
+         <a href="/">Back</a>
+         <a href="/logout">Log Out</a>
+    </nav>
+    {% with messages=get_flashed_messages()%}
+     {% if messages %}
+      {% for message in messages %}
+             <div class="flash">
+                 {{message}}
+             </div>   
+
+      {% endfor %}
+    
+    {% endif %}
+
+   {% endwith %}
+    <div class="table">
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Salary</th>
+                    <th>Gender</th>
+                    <th>Actions</th>
+                </thead>
+                <tbody>
+                    {% for emp in employees %}
+                    <tr>
+                        <td>{{emp.name}}</td>
+                        <td>{{emp.age}}</td>
+                        <td>{{emp.salary}}</td>
+                        <td>{{emp.gender}}</td>
+                        <td><a name="" id="" class="btn mybtn" href="/update/{{emp.id}}" role="button">Update</a></td>
+                        <td><a name="" id="" class="btn mybtn" href="/delete/{{emp.id}}" role="button">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+            </table>
+        </div>
+        <footer>
+        <p>&copy; Ssali Jonathan 2019</p>
+    </footer>    
+</body>    
+</html>

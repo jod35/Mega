@@ -1,0 +1,63 @@
+<html>
+<head>
+   <title>
+       Employees
+   </title>
+   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+   <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>Employee Database Manager</h1>
+    </div>
+    <nav>
+        <a href="/home">Home</a>
+        <a href="/">Add Employees</a>
+        <a href="/view">Employee Details</a>
+        <a href="/logout">/Log Out</a>
+        
+    </nav>
+</header>
+{% with messages=get_flashed_messages()%}
+ {% if messages %}
+      {% for message in messages %}
+             <div class="flash">
+                 {{message}}
+             </div>   
+
+      {% endfor %}
+    
+ {% endif %}
+
+{% endwith %}
+
+<div class="cont">
+    
+        <div class="form-index">
+                <form action="/addemp" method="POST">
+                    <h3>Add Employee</h3>
+                    <p>Name</p>
+                    <div class="form-group">
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <p>Age</p>
+                    <input type="number" name="age" id="age">
+                    <p>Salary</p>
+                    <input type="number" name="salary" id="salary">
+                    <p>Gender</p>
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+              <br>
+              <br>
+                    <p><input type="submit" value="Add Employee"></p>
+                </form>
+        </div>
+</div>
+<footer>
+        <p>&copy; Ssali Jonathan 2019</p>
+</footer>    
+</body>    
+</html>

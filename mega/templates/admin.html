@@ -1,0 +1,62 @@
+<html>
+<head>
+   <title>
+       Employees
+   </title>
+   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+   <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>Employee Database Manager</h1>
+    </div>
+    <nav>
+        <a href="/home">Home</a>
+        <a href="/users">User Settings</a>
+        <a href="/admin">Add User</a>
+        <a href="/logout">Log Out</a>
+         
+    </nav>
+</header>
+{% with messages=get_flashed_messages()%}
+ {% if messages %}
+      {% for message in messages %}
+             <div class="flash">
+                 {{message}}
+             </div>   
+
+      {% endfor %}
+    
+ {% endif %}
+
+{% endwith %}
+
+<div class="cont">
+    
+        <div class="form">
+                <form action="/admin" method="POST">
+                    <h3>Add Admin User</h3>
+                    <p>Name</p>
+                    <div class="form-group">
+                        <input type="text" name="username" id="username">
+                    </div>
+                  
+                    <p>Password </p>
+                    <input type="password" name="password" id="password">
+
+                    
+              <br>
+              <br>
+                    <p><input type="submit" value="Add User"></p>
+                </form>
+        </div>
+
+
+</div>
+<footer>
+    <p>&copy; Ssali Jonathan 2019</p>
+</footer>
+    
+</body>    
+</html>

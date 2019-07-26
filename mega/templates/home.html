@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+   <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <title>Employee</title>
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <h1>Employee Database Manager</h1>
+    </div>
+    <nav>
+       {% if current_user.is_authenticated %}
+        <a href="/">Employees</a>
+        <a href="/admin">Admin Users</a>
+        <a href="logout">Log Out</a>
+        {% else %}
+        <a href="/login">Log In</a>
+       {% endif %}
+        
+    </nav>
+    <div class="welcome">
+       <center> <p>Welcome to The Employee Database Manager</p></center>
+    </div>
+</header>
+    <footer>
+        <p>&copy; Ssali Jonathan 2019</p>
+    </footer>    
+</body>
+</html>
